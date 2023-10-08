@@ -13,7 +13,7 @@ xhr.open("GET", "https://restcountries.com/v2/all")
 xhr.send();
 xhr.onload = () => {
     let data = JSON.parse(xhr.response)
-    let answer = data.filter((dummy) => (dummy.population[0]<200000));
+    let answer = data.filter((dummy) => (dummy.flag));
     console.log(answer)
 
 }
